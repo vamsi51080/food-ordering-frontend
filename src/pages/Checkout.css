@@ -1,0 +1,231 @@
+.checkout-page {
+  min-height: 100vh;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.checkout-container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.checkout-container h1 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  color: var(--text-main);
+  margin-bottom: 1.3rem;
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.15rem;
+}
+
+.checkout-form {
+  background: var(--bg-card);
+  border: 1px solid var(--line-soft);
+  padding: 1.3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.checkout-form h2 {
+  margin-top: 0;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #463a33;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(217, 71, 42, 0.14);
+}
+
+.error-message {
+  color: #9f2f1d;
+  background-color: #ffe9de;
+  border: 1px solid #f6c9b7;
+  padding: 0.72rem;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(125deg, var(--brand-red), var(--brand-burnt));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.place-order-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.order-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--line-soft);
+  padding: 1.3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-card);
+  height: fit-content;
+  position: sticky;
+  top: 92px;
+}
+
+.order-summary h2 {
+  margin-top: 0;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.summary-items {
+  margin-bottom: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f0e4d4;
+}
+
+.summary-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.summary-item-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.summary-item-options {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.summary-item-price {
+  font-weight: 700;
+  color: var(--brand-burnt);
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.85rem 0 0.2rem;
+  border-top: 1px dashed var(--line-soft);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.payment-info {
+  text-align: center;
+  color: #6c6058;
+  margin-top: 0.8rem;
+  padding: 0.72rem;
+  background-color: #fff3e1;
+  border: 1px solid #f3e0c2;
+  border-radius: 10px;
+}
+
+.checkout-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.checkout-empty h2 {
+  margin-bottom: 1rem;
+}
+
+.checkout-empty button {
+  background: linear-gradient(125deg, var(--brand-red), var(--brand-burnt));
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+@media (max-width: 968px) {
+  .checkout-content {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-page {
+    padding: 1rem 0.7rem 1.4rem;
+  }
+
+  .checkout-form,
+  .order-summary {
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    min-height: 44px;
+    font-size: 0.92rem;
+  }
+
+  .place-order-btn {
+    min-height: 46px;
+  }
+
+  .summary-item {
+    gap: 0.6rem;
+  }
+}
+
+.summary-calculations {
+  border-top: 1px solid #f0e4d4;
+  padding-top: 0.7rem;
+}
+
+.summary-calculations .summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  color: #6f635c;
+}

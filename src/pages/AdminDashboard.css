@@ -1,0 +1,381 @@
+.admin-dashboard-page {
+  min-height: calc(100vh - 80px);
+  background: #f8fafc;
+  padding: 1rem;
+}
+
+.admin-dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-header h1 {
+  margin: 0;
+  color: #111827;
+}
+
+.admin-logout-btn {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+}
+
+.admin-tabs {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-tabs button {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-tabs button.active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.admin-error {
+  margin-top: 1rem;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.admin-loading {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.admin-panel {
+  margin-top: 1rem;
+}
+
+.admin-panel h2 {
+  margin: 0 0 1rem;
+  color: #1f2937;
+}
+
+.orders-subtabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.orders-subtabs button {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.orders-subtabs button.active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.orders-table-wrapper {
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 0.65rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.orders-table th {
+  color: #374151;
+  background: #f9fafb;
+}
+
+.orders-table select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+}
+
+.order-details-btn {
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #374151;
+  border-radius: 6px;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.order-details-row td {
+  background: #f9fafb;
+}
+
+.order-details-panel {
+  padding: 0.35rem 0;
+}
+
+.order-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.order-meta-grid p {
+  margin: 0;
+  color: #374151;
+}
+
+.order-notes {
+  margin: 0.4rem 0 0.75rem;
+  color: #374151;
+}
+
+.order-details-panel h4 {
+  margin: 0 0 0.5rem;
+  color: #111827;
+}
+
+.order-items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.order-items-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.55rem;
+  background: #fff;
+}
+
+.order-item-options {
+  margin-top: 0.2rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.inventory-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.add-item-form {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  background: #f9fafb;
+}
+
+.add-item-form h3 {
+  margin: 0 0 0.8rem;
+  color: #111827;
+}
+
+.add-item-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-control label {
+  font-size: 0.88rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.form-control input,
+.form-control select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.92rem;
+  background: #fff;
+}
+
+.form-control-wide {
+  grid-column: span 2;
+}
+
+.checkbox-control {
+  margin-top: 0.7rem;
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  color: #374151;
+  font-weight: 600;
+}
+
+.add-item-btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-item-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.inventory-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.inventory-item h3 {
+  margin: 0 0 0.2rem;
+  color: #111827;
+}
+
+.inventory-item p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.variant-text {
+  margin-top: 0.3rem !important;
+  color: #374151 !important;
+}
+
+.inventory-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.inventory-item button {
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.55rem 0.8rem;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.inventory-item button.in-stock {
+  background: #15803d;
+}
+
+.inventory-item button.out-of-stock {
+  background: #b91c1c;
+}
+
+.inventory-item button.edit-btn {
+  background: #1d4ed8;
+}
+
+.inventory-item button.delete-btn {
+  background: #7f1d1d;
+}
+
+.edit-item-form {
+  width: 100%;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  background: #eff6ff;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.edit-item-form h4 {
+  margin: 0 0 0.6rem;
+  color: #1e3a8a;
+}
+
+.save-edit-btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-edit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inventory-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-item-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-control-wide {
+    grid-column: span 1;
+  }
+
+  .order-items-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

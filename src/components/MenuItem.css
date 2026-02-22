@@ -1,0 +1,236 @@
+.menu-item {
+  background: var(--bg-card);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px rgba(89, 58, 31, 0.16);
+}
+
+.menu-item.unavailable {
+  filter: grayscale(0.6);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.menu-item-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.menu-item-tags {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.45rem;
+}
+
+.tag {
+  background: rgba(38, 24, 16, 0.78);
+  color: #fff8f1;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.menu-item-content {
+  padding: 1rem;
+}
+
+.menu-item-name {
+  font-size: 1.25rem;
+  margin: 0 0 0.35rem;
+  color: var(--text-main);
+}
+
+.menu-item-description {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin: 0 0 0.95rem;
+  line-height: 1.5;
+  min-height: 2.6em;
+}
+
+.menu-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.menu-item-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-burnt);
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(125deg, var(--brand-red), var(--brand-burnt));
+  color: #fff;
+  border: none;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(159, 47, 29, 0.25);
+}
+
+.unavailable-badge {
+  color: #8e8074;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(19, 13, 10, 0.54);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 0.8rem;
+}
+
+.modal-content {
+  background: #fffdf8;
+  border: 1px solid var(--line-soft);
+  padding: 1.55rem;
+  border-radius: 20px;
+  max-width: 540px;
+  width: 100%;
+  max-height: 84vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.7rem;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #8f7f73;
+}
+
+.modal-description {
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.option-group {
+  margin-bottom: 1.1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.option-group h4 {
+  margin-bottom: 0.62rem;
+  color: var(--text-main);
+}
+
+.required {
+  color: var(--brand-red);
+  margin-left: 0.25rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  padding: 0.48rem;
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: background-color 0.2s ease;
+}
+
+.option-label:hover {
+  background-color: var(--bg-soft);
+}
+
+.option-label input {
+  margin-right: 0.65rem;
+  accent-color: var(--brand-red);
+}
+
+.modal-add-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(125deg, var(--brand-red), var(--brand-burnt));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modal-total {
+  margin: 0.35rem 0 0.7rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .menu-item-image {
+    height: 170px;
+  }
+
+  .menu-item-name {
+    font-size: 1.12rem;
+  }
+
+  .menu-item-price {
+    font-size: 1.12rem;
+  }
+
+  .add-to-cart-btn {
+    min-height: 42px;
+    padding: 0.52rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal-content {
+    max-width: 100%;
+    max-height: 88vh;
+    border-radius: 18px 18px 0 0;
+    padding: 1.1rem;
+    border-bottom: none;
+  }
+
+  .modal-close {
+    top: 0.4rem;
+    right: 0.55rem;
+  }
+
+  .option-group {
+    padding: 0.62rem;
+  }
+
+  .modal-add-btn {
+    min-height: 44px;
+  }
+}
