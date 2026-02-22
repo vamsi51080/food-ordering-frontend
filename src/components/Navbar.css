@@ -51,6 +51,22 @@
   gap: 0.6rem;
 }
 
+.admin-button {
+  text-decoration: none;
+  color: var(--text-main);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  padding: 0.65rem 0.85rem;
+  font-weight: 600;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.admin-button:hover {
+  background: var(--bg-soft);
+  transform: translateY(-1px);
+}
+
 .cart-button {
   position: relative;
   background: linear-gradient(125deg, var(--brand-red), var(--brand-burnt));
@@ -101,12 +117,17 @@
     gap: 0.5rem;
   }
 
+  .admin-button,
   .cart-button {
     padding: 0.58rem 0.7rem;
     min-height: 42px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .admin-button {
+    font-size: 0.82rem;
   }
 }
 
@@ -117,6 +138,11 @@
 
   .navbar-actions {
     gap: 0.4rem;
+  }
+
+  .admin-button {
+    padding: 0.5rem 0.62rem;
+    font-size: 0.78rem;
   }
 
   .cart-button {

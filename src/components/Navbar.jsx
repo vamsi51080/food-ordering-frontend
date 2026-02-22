@@ -26,6 +26,9 @@ const Navbar = () => {
         </Link>
 
         <div className="navbar-actions">
+          <Link to="/admin/login" className="admin-button">
+            Admin
+          </Link>
           <Link to="/cart" className="cart-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
